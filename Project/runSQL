@@ -1,0 +1,7 @@
+SELECT t1.away_team_api_id, t1.home_team_api_id,
+(SELECT t2.team_long_name FROM Team t2 WHERE t1.home_team_api_id = t2.team_api_id) as "HomeTeam",
+(SELECT t3.team_long_name FROM Team t3 WHERE t1.away_team_api_id = t3.team_api_id) as "AwayTeam"
+FROM Match t1
+WHERE t1.season = '2015/2016'
+AND t1.country_id= '1729';
+
