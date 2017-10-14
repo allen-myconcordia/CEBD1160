@@ -1,0 +1,55 @@
+Distribution of y
+Distribution of x
+Plot x and y
+
+_
+
+Plot of x
+
+set key autotitle columnheader
+set terminal png
+set output 'age_Distribution.png'
+set title 'Age Distribution'
+set ylabel 'Frequency'
+set xlabel 'Age'
+bin_width = .1
+bin_number(x) = floor(x/bin_width)
+rounded(x) = bin_width * ( bin_number(x) + 0.5 )
+set yrange [0:2000]
+plot 'FIFA18_v03_age.csv' using (rounded($1)):(1) smooth frequency with boxes;
+
+
+docker cp fc2bf8ecc61a:/CEBD1160/data/age_Distribution.png ~/Desktop;
+-
+
+Plot of y
+
+set key autotitle columnheader
+set terminal png
+set output 'value_Distribution.png'
+set title 'Value Distribution'
+set ylabel 'Frequency'
+set xlabel 'Value'
+bin_width = .5
+bin_number(x) = floor(x/bin_width)
+rounded(x) = bin_width * ( bin_number(x) + 0.5 )
+set yrange [0:300]
+plot 'FIFA18_v03_value.csv' using (rounded($1)):(1) smooth frequency with boxes;
+
+docker cp fc2bf8ecc61a:/CEBD1160/data/value_Distribution.png ~/Desktop;
+-
+
+Plot x against y
+
+set key autotitle columnheader
+set title 'Age vs Value'
+set ylabel 'Value'
+set xlabel 'Age'
+set grid
+set term png
+set output 'Age_vs_Value.png'
+set datafile separator ","
+plot 'FIFA18_v03.csv' using 2:8 with lines
+
+docker cp fc2bf8ecc61a:/CEBD1160/data/Age_vs_Value.png ~/Desktop;
+-
