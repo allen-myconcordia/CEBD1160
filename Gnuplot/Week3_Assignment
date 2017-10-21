@@ -53,3 +53,8 @@ plot 'FIFA18_v03.csv' using 2:8 with lines
 
 docker cp fc2bf8ecc61a:/CEBD1160/data/Age_vs_Value.png ~/Desktop;
 -
+
+
+
+
+docker ps -a
