@@ -1,0 +1,15 @@
+// R command lines
+
+install.packages("RCurl")
+library(RCurl)
+y <- read.csv("https://raw.githubusercontent.com/allen-myconcordia/CEBD1160/master/Gnuplot/FIFA18_v03.csv")
+
+
+// Draw histogram for Age
+hist(y$Age)
+
+// Draw histogram for Value
+hist(y$Value)
+
+// Draw scatterplot Age vs Value
+plot(y$Age, y$Value)
