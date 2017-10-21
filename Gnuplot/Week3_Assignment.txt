@@ -19,7 +19,7 @@ set yrange [0:2000]
 plot 'FIFA18_v03_age.csv' using (rounded($1)):(1) smooth frequency with boxes;
 
 
-docker cp fc2bf8ecc61a:/CEBD1160/data/age_Distribution.png ~/Desktop;
+docker cp fc2bf8ecc61a:/CEBD1160/Gnuplot/age_Distribution.png ~/Desktop;
 -
 
 Plot of y
@@ -36,7 +36,7 @@ rounded(x) = bin_width * ( bin_number(x) + 0.5 )
 set yrange [0:300]
 plot 'FIFA18_v03_value.csv' using (rounded($1)):(1) smooth frequency with boxes;
 
-docker cp fc2bf8ecc61a:/CEBD1160/data/value_Distribution.png ~/Desktop;
+docker cp fc2bf8ecc61a:/CEBD1160/Gnuplot/value_Distribution.png ~/Desktop;
 -
 
 Plot x against y
@@ -49,12 +49,16 @@ set grid
 set term png
 set output 'Age_vs_Value.png'
 set datafile separator ","
-plot 'FIFA18_v03.csv' using 2:8 with lines
+plot 'FIFA18_v03.csv' using 2:8 with points
 
-docker cp fc2bf8ecc61a:/CEBD1160/data/Age_vs_Value.png ~/Desktop;
+docker cp fc2bf8ecc61a:/CEBD1160/Gnuplot/Age_vs_Value.png ~/Desktop;
 -
 
 
 
 
 docker ps -a
+
+
+
+
