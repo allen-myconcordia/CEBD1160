@@ -6,10 +6,10 @@ y <- read.csv("https://raw.githubusercontent.com/allen-myconcordia/CEBD1160/mast
 
 
 // Draw histogram for Age
-hist(y$Age)
+hist(y$Age, main = "Histogram of Age", xlab = "Age", ylab = "Frequency")
 
 // Draw histogram for Value
-hist(y$Value)
+hist(y$Value, main = "Histogram of Value", xlab = "Value", ylab = "Frequency")
 
 // Draw scatterplot Age vs Value
-plot(y$Age, y$Value)
+plot(y$Age, y$Value, xlab = "Age", ylab = "Value", main = "Age vs Value")
