@@ -39,6 +39,9 @@ set yrange [0:2000]
 plot 'FIFA18_v03_age.csv' using (rounded($1)):(1) smooth frequency with boxes;
 ```
 
+![alt text](https://github.com/allen-myconcordia/CEBD1160/blob/master/Gnuplot/age_Distribution.png "Gnuplot 1")
+
+
 2. Plot y-axis -> copy & paste in Gnuplot
 ```
 set key autotitle columnheader
