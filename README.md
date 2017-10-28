@@ -96,7 +96,6 @@ y <- read.csv("https://raw.githubusercontent.com/allen-myconcordia/CEBD1160/mast
 ```
 hist(y$Age, main = "Histogram of Age", xlab = "Age", ylab = "Frequency")
 ```
-![alt text](https://github.com/allen-myconcordia/CEBD1160/blob/master/R/Histogram_Age.pdf "Gnuplot 1")
 
 2. Plot y-axis -> copy & paste in R studio
 ```
