@@ -15,9 +15,16 @@ How to run Gnuplot code:
 =========================
 
 Requirements:
-The data files need to be in the same folder as where Gnuplot is being launched
+The following files need to be in the same folder where Gnuplot is being launched.
 
-1. Plot x-axis
+| Graph  | Data files  |
+|---|---|
+| Plot age distribution  | FIFA18_v03_age.csv  |
+| Plot value distribution | FIFA18_v03_value.csv  |
+| Plot scatterplot  | FIFA18_v03.csv  |
+
+
+1. Plot x-axis -> copy & paste in Gnuplot
 ```
 set key autotitle columnheader
 set terminal png
@@ -32,7 +39,7 @@ set yrange [0:2000]
 plot 'FIFA18_v03_age.csv' using (rounded($1)):(1) smooth frequency with boxes;
 ```
 
-2. Plot y-axis
+2. Plot y-axis -> copy & paste in Gnuplot
 ```
 set key autotitle columnheader
 set terminal png
@@ -47,7 +54,7 @@ set yrange [0:300]
 plot 'FIFA18_v03_value.csv' using (rounded($1)):(1) smooth frequency with boxes;
 ```
 
-3. Plot scatterplot
+3. Plot scatterplot -> copy & paste in Gnuplot
 
 ```
 set key autotitle columnheader
@@ -67,7 +74,7 @@ How to run R code:
 
 Requirements:
 
-(i) Load packages
+(i) Load packages / libraries
 ```
 install.packages("RCurl")
 library(RCurl)
@@ -78,17 +85,17 @@ library(RCurl)
 y <- read.csv("https://raw.githubusercontent.com/allen-myconcordia/CEBD1160/master/Gnuplot/FIFA18_v03.csv")
 ```
 
-1. Plot x-axis
+1. Plot x-axis -> copy & paste in R studio
 ```
 hist(y$Age, main = "Histogram of Age", xlab = "Age", ylab = "Frequency")
 ```
 
-2. Plot y-axis
+2. Plot y-axis -> copy & paste in R studio
 ```
 hist(y$Value, main = "Histogram of Value", xlab = "Value", ylab = "Frequency")
 ```
 
-3. Plot scatterplot
+3. Plot scatterplot -> copy & paste in R studio
 ```
 plot(y$Age, y$Value, xlab = "Age", ylab = "Value", main = "Age vs Value")
 ```
