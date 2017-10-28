@@ -56,6 +56,9 @@ rounded(x) = bin_width * ( bin_number(x) + 0.5 )
 set yrange [0:300]
 plot 'FIFA18_v03_value.csv' using (rounded($1)):(1) smooth frequency with boxes;
 ```
+![alt text](https://github.com/allen-myconcordia/CEBD1160/blob/master/Gnuplot/value_Distribution.png "Gnuplot 2")
+
+
 
 3. Plot scatterplot -> copy & paste in Gnuplot
 
@@ -70,6 +73,7 @@ set output 'Age_vs_Value.png'
 set datafile separator ","
 plot 'FIFA18_v03.csv' using 2:8 with points
 ```
+![alt text](https://github.com/allen-myconcordia/CEBD1160/blob/master/Gnuplot/Age_vs_Value.png "Gnuplot 3")
 
 
 How to run R code:
@@ -92,6 +96,7 @@ y <- read.csv("https://raw.githubusercontent.com/allen-myconcordia/CEBD1160/mast
 ```
 hist(y$Age, main = "Histogram of Age", xlab = "Age", ylab = "Frequency")
 ```
+![alt text](https://github.com/allen-myconcordia/CEBD1160/blob/master/R/Histogram_Age.pdf "Gnuplot 1")
 
 2. Plot y-axis -> copy & paste in R studio
 ```
